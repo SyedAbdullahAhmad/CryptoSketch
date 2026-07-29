@@ -20,11 +20,6 @@ class Settings(BaseSettings):
     default_algorithm: str = "feature"
     top_n_results: int = 20
 
-    # Liquidity scanner (HTF/LTF)
-    htf_confluence_lookback_days: float = 7.0  # calendar window aligned across 1h/4h/1d
-    htf_min_candles_for_structure: int = 15    # floor so swing detection has enough data
-    max_htf_confluence_candles: int = 500      # ceiling so 1h fetches don't explode
-
     # Caching
     cache_dir: str = ".cache/candles"
     cache_ttl_seconds: int = 60
